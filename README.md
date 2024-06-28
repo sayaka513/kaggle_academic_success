@@ -9,7 +9,7 @@ https://www.kaggle.com/competitions/playground-series-s4e6<br>
 <br>
 ## EDA
 ### カテゴリ変数の対応
-欠損値はなく、Target列以外の列は全て数値型のデータであった。
+欠損値はなく（不明値やnullは0で入力されている）、Target列以外の列は全て数値型のデータであった。
 しかし、originalデータ提供先を確認し、一部の数値データが名義尺度であることを確認した。<br><br>
 例：Marital statusについて、<br>
 1 – single 2 – married 3 – widower 4 – divorced 5 – facto union 6 – legally separated<br><br>
