@@ -34,7 +34,6 @@ https://www.kaggle.com/competitions/playground-series-s4e6<br>
 Targetは分布に偏りが発生しているため、StratifiedKFoldを用いたクロスバリデーションを行うこととした。<br><br>
 ![image](https://github.com/sayaka513/kaggle_academic_success/assets/160210603/038d319d-0488-455d-8bdf-679d96da1316)
 <br><br>
-[Discussion](https://www.kaggle.com/competitions/playground-series-s4e6/discussion/509073)にて、決定木での予測により退学を決定付ける特徴量が二つ生じているという報告があり、決定木ベースのモデルは特に有用ではないかと推測された。<br>
-<br>実際、XGBClassifier、LGBMClassifier、CatBoostClassifierにおいてクロスバリデーションを用いたRandomSearchにてハイパーパラメーターチューニングを行ったところ、83%以上のaccuracyを得た。
+XGBClassifier、LGBMClassifier、CatBoostClassifierにおいてクロスバリデーションを用いたRandomSearchにてハイパーパラメーターチューニングを行ったところ、83%以上のaccuracyを得た。
 そのため、これらのモデルなどを組み合わせたStackingClassifierやVotingClassifier等のアンサンブル学習を行い、精度の向上を計る。
 
