@@ -1,6 +1,8 @@
 # Classification with an Academic Success Dataset
 https://www.kaggle.com/competitions/playground-series-s4e6<br>
 目的：高等教育における学生の退学リスクを予測する<br>
+最終順位：31/2739（上位2%）
+![image](https://github.com/sayaka513/kaggle_academic_success/assets/160210603/66d2ff7c-ed3c-4d69-a9af-45b0e803c864)<br>
 <br>
 ## 説明
 このコンペ用のtrain・testデータセットは「<a href="https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success">学生のドロップアウトと学業成績の予測データセット</a>」でトレーニングされたディープラーニングモデルから生成されており、originalデータは自由に使用可能となっている。<br>
@@ -35,5 +37,5 @@ Targetは分布に偏りが発生しているため、StratifiedKFoldを用い�
 ![image](https://github.com/sayaka513/kaggle_academic_success/assets/160210603/038d319d-0488-455d-8bdf-679d96da1316)
 <br><br>
 XGBClassifier、LGBMClassifier、CatBoostClassifierにおいてクロスバリデーションを用いたRandomSearchにてハイパーパラメーターチューニングを行ったところ、83%以上のaccuracyを得た。
-そのため、これらのモデルなどを組み合わせたStackingClassifierやVotingClassifier等のアンサンブル学習を行い、精度の向上を計る。
+そのため、ベースモデルをXGBClassifier、LGBMClassifier、CatBoostClassifier、メタモデルをLogisticRegressionとし、StackingClassifierを用いて予測性能の向上を計った。
 
