@@ -1,5 +1,6 @@
 # Classification with an Academic Success Dataset
 https://www.kaggle.com/competitions/playground-series-s4e6<br>
+Playground Series<br>
 目的：高等教育における学生の退学リスクを予測する<br>
 Private Score：0.83827<br>
 最終順位：31/2739（上位2%）<br>
